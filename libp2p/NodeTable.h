@@ -120,7 +120,7 @@ inline std::ostream& operator<<(std::ostream& _out, NodeTable const& _nodeTable)
  * @todo optimize knowledge at opposite edges; eg, s_bitsPerStep lookups. (Can be done via pointers to NodeBucket)
  * @todo ^ s_bitsPerStep = 8; // Denoted by b in [Kademlia]. Bits by which address space is divided.
  */
-class NodeTable : UDPSocketEvents
+class NodeTable : public UDPSocketEvents
 {
     friend std::ostream& operator<<(std::ostream& _out, NodeTable const& _nodeTable);
     using NodeSocket = UDPSocket<NodeTable, 1280>;
