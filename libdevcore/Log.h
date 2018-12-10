@@ -214,27 +214,6 @@ inline boost::log::formatting_ostream& operator<<(
     _strm.stream() << EthCyan "#" << _value.abridged() << EthReset;
     return _strm;
 }
-inline boost::log::formatting_ostream& operator<<(
-    boost::log::formatting_ostream& _strm, h256& _value)
-{
-    auto const& constValue = _value;
-    _strm << constValue;
-    return _strm;
-}
-
-inline boost::log::formatting_ostream& operator<<(
-    boost::log::formatting_ostream& _strm, h512 const& _value)
-{
-    _strm.stream() << EthTeal "##" << _value.abridged() << EthReset;
-    return _strm;
-}
-inline boost::log::formatting_ostream& operator<<(
-    boost::log::formatting_ostream& _strm, h512& _value)
-{
-    auto const& constValue = _value;
-    _strm << constValue;
-    return _strm;
-}
 
 inline boost::log::formatting_ostream& operator<<(
     boost::log::formatting_ostream& _strm, bytesConstRef _value)
