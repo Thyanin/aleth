@@ -273,7 +273,7 @@ int main(int argc, char** argv)
     }
 
     Transaction t;
-    Address contractDestination("1122334455667788991011121314151617181920");
+    Address contractDestination("0000000000000000000000000000000000000000");
     if (!code.empty())
     {
         // Deploy the code on some fake account to be called later.
